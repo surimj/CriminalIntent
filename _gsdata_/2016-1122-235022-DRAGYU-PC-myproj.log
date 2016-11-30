@@ -1,0 +1,52 @@
+----- 2016/11/22 23:50:22：任务 'myproj'：计算机 'DRAGYU-PC' 上的分析操作已由 User 所启动 (GoodSync v 8.4.2.2 on , Wow32on64) -----
+myproj: =EasyU:\android_pro\CriminalIntent (E:\android_pro\CriminalIntent) =forced-PropDels=> C:\android_pro\CriminalIntent, SavePrevVers=30d, TmpDest, EstReq, CopyLocked, FileLinksDrill, CaseSens, Reconnect=3, ChangeLimit=50
+排除隐藏属性, 排除系统属性, 已排除 licens*.rfo|cache.rfo|mru.rfo|mpp*.rfo|RoboForm Online Account.rfp|name *._gstmp|/System Volume Information|Thumbs.db|.DS_Store 
+左侧: 读取状态文件 E:\android_pro\CriminalIntent\_gsdata_\_file_state._gs
+左侧：文件： 1,426 (已排除 )。文件夹： 694 (已排除 1)。 E:\ exFAT, 可用空间：10.8 GB，总计空间：13.2 GB
+右侧: 读取状态文件 C:\android_pro\CriminalIntent\_gsdata_\_file_state._gs
+右侧：文件： 1,403 (已排除 )。文件夹： 693 (已排除 1)。 C:\ NTFS, 可用空间：217 GB，总计空间：488 GB
+同步需要磁盘 C: 上的空间应为 280 KB，目前为 217 GB
+变更：29， 冲突：， 复制时间：， 复制状态：， 错误： 
+Left to Right: Copy File: 29 
+----- 2016/11/22 23:50:23：分析已结束。 历时 00:00:01， 速度： 2,121 个文件/秒 -----
+
+===== 2016/11/22 23:50:25：任务 'myproj'：同步已被 User 所启动，位于计算机 'DRAGYU-PC' =====
+myproj: =EasyU:\android_pro\CriminalIntent (E:\android_pro\CriminalIntent) =forced-PropDels=> C:\android_pro\CriminalIntent, SavePrevVers=30d, TmpDest, EstReq, CopyLocked, FileLinksDrill, CaseSens, Reconnect=3, ChangeLimit=50
+Locking folder E:\android_pro\CriminalIntent for write
+Locking folder C:\android_pro\CriminalIntent for write
+创建文件夹 'C:\android_pro\CriminalIntent\.idea\libraries'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\animated_vector_drawable_25_0_1.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\animated_vector_drawable_25_0_1.xml'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\appcompat_v7_25_0_1.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\appcompat_v7_25_0_1.xml'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\espresso_core_2_0.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\espresso_core_2_0.xml'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\espresso_idling_resource_2_0.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\espresso_idling_resource_2_0.xml'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\hamcrest_core_1_1.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\hamcrest_core_1_1.xml'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\hamcrest_core_1_3.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\hamcrest_core_1_3.xml'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\hamcrest_integration_1_1.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\hamcrest_integration_1_1.xml'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\hamcrest_library_1_1.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\hamcrest_library_1_1.xml'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\javawriter_2_1_1.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\javawriter_2_1_1.xml'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\javax_annotation_api_1_2.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\javax_annotation_api_1_2.xml'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\javax_inject_1.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\javax_inject_1.xml'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\jsr305_2_0_1.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\jsr305_2_0_1.xml'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\junit_4_12.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\junit_4_12.xml'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\junit_dep_4_10.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\junit_dep_4_10.xml'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\support_annotations_25_0_1.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\support_annotations_25_0_1.xml'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\support_compat_25_0_1.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\support_compat_25_0_1.xml'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\support_core_ui_25_0_1.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\support_core_ui_25_0_1.xml'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\support_core_utils_25_0_1.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\support_core_utils_25_0_1.xml'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\support_fragment_25_0_1.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\support_fragment_25_0_1.xml'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\support_media_compat_25_0_1.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\support_media_compat_25_0_1.xml'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\support_v4_25_0_1.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\support_v4_25_0_1.xml'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\support_vector_drawable_25_0_1.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\support_vector_drawable_25_0_1.xml'
+新建复制 'E:\android_pro\CriminalIntent\.idea\libraries\testing_support_lib_0_1.xml' -> 'C:\android_pro\CriminalIntent\.idea\libraries\testing_support_lib_0_1.xml'
+覆盖复制 'E:\android_pro\CriminalIntent\.idea\misc.xml' -> 'C:\android_pro\CriminalIntent\.idea\misc.xml'
+覆盖复制 'E:\android_pro\CriminalIntent\.idea\modules.xml' -> 'C:\android_pro\CriminalIntent\.idea\modules.xml'
+覆盖复制 'E:\android_pro\CriminalIntent\.idea\workspace.xml' -> 'C:\android_pro\CriminalIntent\.idea\workspace.xml'
+覆盖复制 'E:\android_pro\CriminalIntent\app\app.iml' -> 'C:\android_pro\CriminalIntent\app\app.iml'
+覆盖复制 'E:\android_pro\CriminalIntent\local.properties' -> 'C:\android_pro\CriminalIntent\local.properties'
+保存状态文件 E:\android_pro\CriminalIntent\_gsdata_\_file_state._gs
+保存状态文件 C:\android_pro\CriminalIntent\_gsdata_\_file_state._gs
+Delete lock file E:\android_pro\CriminalIntent\_gsdata_\lock.gsl
+Delete lock file C:\android_pro\CriminalIntent\_gsdata_\lock.gsl
+项目同步未必： 29，错误： 
+===== 2016/11/22 23:50:26：同步完毕。时间：00:00:01，速度： 6.18 MB/s =====
+
