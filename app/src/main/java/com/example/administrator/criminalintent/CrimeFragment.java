@@ -72,14 +72,13 @@ public class CrimeFragment extends Fragment {
             @Override
             public void beforeTextChanged
                     (CharSequence charSequence, int start, int count, int after) {
-
             }
 
 
             @Override
             public void onTextChanged
                     (CharSequence charSequence, int start, int count, int after) {
-
+                mCrime.setTitle(charSequence.toString());
             }
 
             @Override
@@ -125,8 +124,6 @@ public class CrimeFragment extends Fragment {
             mCrime.setDate(date);
             updateDate();
         }
-
-
     }
 
     private void updateDate() {

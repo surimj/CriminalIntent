@@ -28,12 +28,7 @@ public class CrimeLab {
     private CrimeLab(Context context){
         //创建一个空的List来保存Crime对象
         mCrimes = new ArrayList<>();
-        for (int i =0;i <100; i++){
-            Crime crime = new Crime();
-            crime.setTitle("Crime#"+i);
-            crime.setSolved(i%2 == 0);
-            mCrimes.add(crime);
-        }
+
     }
 
     public List<Crime> getCrimes() {
@@ -48,6 +43,10 @@ public class CrimeLab {
             }
         }
         return null;
+    }
 
+    //增加Crime
+    public void addCrime(Crime c){
+        mCrimes.add(c);
     }
 }

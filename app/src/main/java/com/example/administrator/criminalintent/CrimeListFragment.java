@@ -4,10 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.format.DateFormat;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
@@ -26,6 +30,15 @@ public class CrimeListFragment extends Fragment {
     private RecyclerView mCrimeRecyclerView;
     private CrimeAdapter mAdapter;
     private int mItemPosition;
+    private boolean mSubtitleVisible;
+
+    private static final String SAVED_SUBTITLE_VISIBLE = "subtitle";
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
 
     @Nullable
     @Override
@@ -40,16 +53,80 @@ public class CrimeListFragment extends Fragment {
         //RecyclerView的正常工作必须有LayoutManager
         mCrimeRecyclerView.setLayoutManager( new LinearLayoutManager(getActivity()));
 
+        if (savedInstanceState!=null){
+            mSubtitleVisible = savedInstanceState
+                    .getBoolean(SAVED_SUBTITLE_VISIBLE,mSubtitleVisible);
+        }
+
         updateUI();
         return  view;
 
     }
 
-    //刷新显示列表项
+    /*CrimeListActivity恢复运行后，操作系统发出指令调用onResume()生命周期方法。
+    CrimeListActivity接受指令后，它的FragmentManager会调用被当前activity托管的fragment的onResume()
+    方法。
+    要保证fragment视图得到刷新，一般在onResume()方法内更新代码最安全。
+     */
+    //Fragment刷新显示列表项
     @Override
     public void onResume() {
         super.onResume();
         updateUI();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putBoolean(SAVED_SUBTITLE_VISIBLE,mSubtitleVisible);
+    }
+
+    //实例化选项菜单
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.fragment_cirme_list,menu);
+
+        MenuItem subtitleItem = menu.findItem(R.id.menu_item_show_subtitle);
+        if (mSubtitleVisible){
+            subtitleItem.setTitle(R.string.hide_subtitle);
+        }else {
+            subtitleItem.setTitle(R.string.show_subtitle);
+        }
+    }
+
+    //响应菜单选项选择事件
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menu_item_new_crime:
+                Crime crime = new Crime();
+                CrimeLab.get(getActivity()).addCrime(crime);
+                Intent intent = CrimePagerActivity.newIntent(getActivity(),crime.getId());
+                startActivity(intent);
+                return true;
+            case R.id.menu_item_show_subtitle:
+                mSubtitleVisible = !mSubtitleVisible;
+                getActivity().invalidateOptionsMenu();
+                updateSubtitle();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    //设置工具栏子标题
+    private void updateSubtitle(){
+        CrimeLab crimeLab = CrimeLab.get(getActivity());
+        int crimeCount = crimeLab.getCrimes().size();
+        String subtitle = getString(R.string.subtitle_format,crimeCount+"");
+        if (!mSubtitleVisible){
+            subtitle = null;
+        }
+
+        AppCompatActivity activity = (AppCompatActivity) getActivity();
+        activity.getSupportActionBar().setSubtitle(subtitle);
+
     }
 
     //将Adapter与RecyclerView关联起来，实现一个设置CrimeListFragment用户界面的方法
@@ -65,6 +142,7 @@ public class CrimeListFragment extends Fragment {
         }else{
             mAdapter.notifyItemChanged(mItemPosition);
         }
+        updateSubtitle();
 
     }
 

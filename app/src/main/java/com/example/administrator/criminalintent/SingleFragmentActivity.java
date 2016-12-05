@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
 
 /**
  * Created by dragyu on 2016/11/23.
@@ -12,7 +13,7 @@ import android.support.v4.app.FragmentManager;
  * 然后在容器中查找FragmentManager里的fragment，找不到就新建一个放入容器。
  */
 
-public abstract class SingleFragmentActivity extends FragmentActivity {
+public abstract class SingleFragmentActivity extends AppCompatActivity {
 
     protected abstract Fragment createFragment();
     @Override
